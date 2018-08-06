@@ -1,0 +1,185 @@
+<html>
+<head>
+	<title>Unit: {{% unit_name %}}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<h1>{{% unit_name %}}</h1>
+	<div>
+	<main-container>
+	
+		<!-- High-level info -->
+		<div class="container">
+		<header class="jumbotron">
+			<!-- Has: Type, Power Rating, and Unit Name -->
+			<div class="col-sm-2">
+			<echelon-type class="clearfix">
+				<img alt="headquarters" src="../Images/unit_types/headquarters.jpg" />			
+			</echelon-type>
+			</div>
+			
+			<div class="col-sm-2">
+			<power-rating>
+				<h2>12</h2>
+			</power-rating>
+			</div>
+			
+			<div class="col-sm-8">
+			<unit-name>
+				<h1>Lord Kaldor Draigo</h1>
+			</unit-name>
+			</div>
+		</header>
+		</div>
+		
+		<!-- Numeric Statistics -->
+		<div class="container">
+		<stat-block>
+			<!-- Has: Standard Stat Block -->
+			<div class="col-sm-2">
+			<vertical-bar>
+			</vertical-bar>
+			</div>
+			<div class="col-sm-8">
+			
+			<stats-table>
+				<table class="table">
+					<tr>
+						<th>M</th>
+						<th>WS</th>
+						<th>BS</th>
+						<th>S</th>
+						<th>T</th>
+						<th>W</th>
+						<th>A</th>
+						<th>Ld</th>
+						<th>Sv</th>
+					</tr>
+					<tr>
+						<td>M</td>
+						<td>WS</td>
+						<td>BS</td>
+						<td>S</td>
+						<td>T</td>
+						<td>W</td>
+						<td>A</td>
+						<td>Ld</td>
+						<td>Sv</td>
+					</tr>
+				</table>			
+			</stats-table>
+			</div>
+			
+			<div class="col-sm-2">
+			<vertical-bar>
+			</vertical-bar>
+			</div>
+		</stat-block>
+		</div>
+		
+		<!-- Weapons - all options -->
+		<div class="container">
+		<weapons-block>
+			<div>
+				<abilities-title>
+					<h3>Weapons</h3>
+				<abilities-title>
+			</div>
+			
+			<div>
+			<weapons-table>
+				<table class="table">
+					<tr>
+						<th>Weapon</th>
+						<th>Range</th>
+						<th>Type</th>
+						<th>S</th>
+						<th>AP</th>
+						<th>D</th>
+						<th>Abilities</th>
+					</tr>
+					<tr>
+						<td>Weapon</td>
+						<td>Range</td>
+						<td>Type</td>
+						<td>S</td>
+						<td>AP</td>
+						<td>D</td>
+						<td>Abilities</td>
+					</tr>
+				</table>			
+			</weapons-table>
+			</div>
+		</weapons-block>
+		</div>
+		
+		<!-- Abilities -->
+		<div class="container">
+		<ability-block>
+			<div>
+				<abilities-title>
+					<h3>Abilities</h3>
+				<abilities-title>
+			</div>
+			
+			<div>
+				<abilities-column1>
+					<p><b>And they shall know no fear</b>: </p>
+				</abilities-column1>
+				<abilities-column2>
+				</abilities-column2>
+			</div>
+		</ability-block>
+		</div>
+		
+		<!-- Psyker - only if used -->
+		{{ if block }}
+		<div class="container">
+		<psyker-block>
+			<div>
+				<psyker-title>
+					<h3>Psyker</h3>
+				<psyker-title>
+			</div>
+			
+			<div>
+				<psykerabilities-column1>
+					<p>{{% unit_name %}} can do psychic stuff</p>
+				</psykerabilities-column1>
+			</div>
+		</psyker-block>
+		</div>
+		
+		<!-- Keywords -->
+		<div class="container">
+		<factionkeyword-block>
+			<div class="container">
+				<factionkeywords-column1 class="col-sm-2">
+					Faction Keywords
+				</factionkeywords-column1>
+				<factionkeywords-column2 class="col-sm-10">
+				</factionkeywords-column2>
+			</div>
+		</factionkeyword-block>
+		<keyword-block>
+			<div class="container">
+				<keywords-column1 class="col-sm-2">
+					Keywords
+				</keywords-column1>
+				<keywords-column2 class="col-sm-10">
+				</keywords-column2>
+			</div>
+		</keyword-block>
+		</div>
+		
+		
+	</main-container>
+	</div>
+</body>
+</html>
