@@ -60,12 +60,6 @@ CREATE TABLE stat_block(
     Save TINYINT
 );
 
-CREATE TABLE points(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    unitname VARCHAR(50),
-
-);
-
 CREATE TABLE units(
     id INT PRIMARY KEY AUTO_INCREMENT,
     unit_name VARCHAR(50),
@@ -74,4 +68,8 @@ CREATE TABLE units(
     pointspermodel SMALLINT
 );
 
-CREATE TABLE units_points_xref()
+CREATE TABLE weapons_points_xref();
+
+CREATE TABLE wpn_points()
+
+CREATE TABLE wpn_stats();
