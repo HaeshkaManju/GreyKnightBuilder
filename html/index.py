@@ -1,0 +1,12 @@
+import flask
+
+print(""" <html>
+<head>
+	<title>Attempt with Python</title>
+</head>
+<body>
+	<h1>Non-Pythonic</h1>
+	{% variable %}
+	{{ variable }}
+</body>
+</html>""")
