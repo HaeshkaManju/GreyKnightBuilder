@@ -1,0 +1,77 @@
+CREATE TABLE keywords(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    keyword VARCHAR(50)
+);
+
+CREATE TABLE faction_keywords(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    faction_keyword VARCHAR(50)
+);
+
+CREATE TABLE echelon(
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    echelon_type VARCHAR(50) NOT NULL,
+    sigil VARCHAR(150)
+);
+
+CREATE TABLE abilities(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    ability_name VARCHAR(150),
+    book VARCHAR(50),
+    page_num INT,
+    ability_description VARCHAR(4096)
+);
+
+CREATE TABLE powers(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    power_name VARCHAR(150) NOT NULL,
+    discipline INT,
+    power_fluff VARCHAR(4096),
+    power_description VARCHAR(4096),
+    FOREIGN KEY (discipline)
+        REFERENCES disciplines(id)
+);
+
+CREATE TABLE disciplines(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    discipline_name VARCHAR(150) NOT NULL,
+    book VARCHAR(50),
+    page_num SMALLINT
+);
+
+CREATE TABLE composition(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    description VARCHAR(4096),
+    power_rating SMALLINT,
+    models SMALLINT
+);
+
+CREATE TABLE stat_block(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    model_name VARCHAR(50),
+    movement TINYINT,
+    WeaponSkill TINYINT,
+    BallisticSkill TINYINT,
+    Strength TINYINT,
+    Toughness TINYINT,
+    Wounds TINYINT,
+    Attacks TINYINT,
+    Leadership TINYINT,
+    Save TINYINT
+);
+
+CREATE TABLE points(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    unitname VARCHAR(50),
+
+);
+
+CREATE TABLE units(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    unit_name VARCHAR(50),
+    modelsperunit_min SMALLINT,
+    modelsperunit_max SMALLINT,
+    pointspermodel SMALLINT
+);
+
+CREATE TABLE units_points_xref()
