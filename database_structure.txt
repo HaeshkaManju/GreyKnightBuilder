@@ -8,9 +8,9 @@ CREATE TABLE faction_keywords(
     faction_keyword VARCHAR(50)
 );
 
-CREATE TABLE echelon(
+CREATE TABLE role(
     id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    echelon_type VARCHAR(50) NOT NULL,
+    role_type VARCHAR(50) NOT NULL,
     sigil VARCHAR(150)
 );
 
