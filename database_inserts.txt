@@ -8,7 +8,7 @@ INSERT INTO abilities() VALUES
 ('', ''),
 ('', '');
 
-INSERT INTO abilities() VALUES
+INSERT INTO composition() VALUES
 ('', ''),
 ('', ''),
 ('', ''),
@@ -18,7 +18,7 @@ INSERT INTO abilities() VALUES
 ('', ''),
 ('', '');
 
-INSERT INTO abilities() VALUES
+INSERT INTO disciplines() VALUES
 ('', ''),
 ('', ''),
 ('', ''),
@@ -28,7 +28,53 @@ INSERT INTO abilities() VALUES
 ('', ''),
 ('', '');
 
-INSERT INTO abilities() VALUES
+INSERT INTO faction_keywords(faction_keyword) VALUES
+('Imperium'),
+('Adeptus Astartes'),
+('Grey Knights');
+
+INSERT INTO keywords(keyword) VALUES
+('Character'),
+('Infantry'),
+('Grand Master'),
+('Terminator'),
+('Psyker'),
+('Lord Kaldor Draigo'),
+('Voldus'),
+('Vehicle'),
+('Nemesis Dreadknight'),
+('Brotherhood Champion'),
+('Castellan Crowe'),
+('Stern'),
+('Brother-Captain'),
+('Librarian'),
+('Techmarine'),
+('Chaplain'),
+('Terminator Squad'),
+('Strike Squad'),
+('Apothecary'),
+('Ancient'),
+('Brotherhood Ancient'),
+('Paladin Squad'),
+('Paladin'),
+('Purifier Squad'),
+('Dreadnought'),
+('Venerable Dreadnought'),
+('Servitors'),
+('Interceptor Squad'),
+('Purgation Squad'),
+('Transport'),
+('Land Raider'),
+('Land Raider Crusader'),
+('Land Raider Redeemer'),
+('Razorback'),
+('Rhino'),
+('Fly'),
+('Stormhawk Interceptor'),
+('Stormraven Gunship'),
+('Stormtalon Gunship');
+
+INSERT INTO powers() VALUES
 ('', ''),
 ('', ''),
 ('', ''),
@@ -38,7 +84,7 @@ INSERT INTO abilities() VALUES
 ('', ''),
 ('', '');
 
-INSERT INTO abilities() VALUES
+INSERT INTO role() VALUES
 ('', ''),
 ('', ''),
 ('', ''),
@@ -48,7 +94,7 @@ INSERT INTO abilities() VALUES
 ('', ''),
 ('', '');
 
-INSERT INTO abilities() VALUES
+INSERT INTO stat_block() VALUES
 ('', ''),
 ('', ''),
 ('', ''),
@@ -58,17 +104,7 @@ INSERT INTO abilities() VALUES
 ('', ''),
 ('', '');
 
-INSERT INTO abilities() VALUES
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', '');
-
-INSERT INTO abilities() VALUES
+INSERT INTO units() VALUES
 ('', ''),
 ('', ''),
 ('', ''),
