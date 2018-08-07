@@ -17,7 +17,7 @@ CREATE TABLE role(
 CREATE TABLE abilities(
     id INT PRIMARY KEY AUTO_INCREMENT,
     ability_name VARCHAR(150),
-    book VARCHAR(50),
+    book SMALLINT,
     page_num INT,
     ability_description VARCHAR(4096)
 );
@@ -66,6 +66,11 @@ CREATE TABLE units(
     modelsperunit_min SMALLINT,
     modelsperunit_max SMALLINT,
     pointspermodel SMALLINT
+);
+
+CREATE TABLE book(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    book_name VARCHAR(96)
 );
 
 CREATE TABLE weapons_points_xref();

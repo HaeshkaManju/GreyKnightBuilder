@@ -1,12 +1,53 @@
-INSERT INTO abilities() VALUES
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', '');
+INSERT INTO abilities(ability_name, book, page_num, ability_description) VALUES
+('And They Shall Know No Fear', '2', '62', 'You can re-roll failed Morale tests for this unit.'),
+('Daemon Hunters', '2', '62', 'If this unit attacks any DAEMONS in the Fight phase, you can re-roll failed wound rolls for those attacks.'),
+('Rites of Banishment', '2', '62', 'When this unit manifests the Smite psychic power, it has a range of 12" rather than 18", and the target unit suffers only 1 mortal wound rather than D3 (whether or not the result of the Psychic test is more than 10) – unless the target unit is a DAEMON, in which case it suffers 3 mortal wounds instead of D3.'),
+('Teleport Strike', '2', '63', 'During deployment, you can set up this unit in a teleportarium chamber instead of placing it on the battlefield. At the end of any of your Movement phases this unit can teleport into battle – set it up anywhere on the battlefield that is more than 9" away from any enemy models.'),
+('Bane of Evil', '2', '64', 'When a friendly GREY KNIGHTS unit within 6" of Lord Kaldor Draigo makes an attack against a DAEMON unit in the Fight phase, you can re-roll damage rolls for that unit.'),
+('Storm Shield', '2', '64', 'This model has a 3+ invulnerable save.'),
+('Chapter Master', '2', '64', 'You can re-roll failed hit rolls for friendly GREY KNIGHTS units that are within 6" of Lord Kaldor Draigo.'),
+('Warp Emergence', '2', '64', 'During deployment, you can set up Lord Kaldor Draigo in the warp instead of placing him on the battlefield. At the end of any of your Movement phases Lord Kaldor Draigo can emerge from the warp – set him up anywhere on the battlefield that is more than 9" away from any enemy models.'),
+('Iron Halo', '2', '65', 'This model has a 4+ invulnerable save.'),
+('Rites of Battle', '2', '65', 'You can re-roll hit rolls of 1 for friendly GREY KNIGHTS units within 6" of Grand Master Voldus.'),
+('Force Shielding and Iron Halo', '2', '66', 'This model has a 4+ invulnerable save.'),
+('Rites of Battle', '2', '66', 'You can re-roll hit rolls of 1 for friendly GREY KNIGHTS units within 6" of this model.'),
+('Dreadknight Teleporter', '2', '66', 'If this model has a Dreadknight teleporter, then during deployment, you can set it up in a teleportarium chamber instead of placing it on the battlefield. At the end of any of your Movement phases this model can teleport into battle – set it up anywhere on the battlefield that is more than 9" away from any enemy models.'),
+('Heroic Sacrifice', '2', '67', 'If Castellan Crowe is slain in the Fight phase, he can immediately pile in and attack before being removed as a casualty.'),
+('Purifying Flame', '2', '67', 'When this unit manifests the Smite psychic power, it only has a range of 3", but it inflicts D6 mortal wounds instead of D3 (whether or not the result of the Psychic test is more than 10.)'),
+('Master Swordsman', '2', '67', 'You can re-roll failed hit and wound rolls for Castellan Crowe in the Fight phase. In addition, each time you make a successful wound roll for Castellan Crowe in the Fight phase, you can immediately make another attack with the Black Blade of Antwyr, though these additional attacks cannot generate any further attacks.'),
+('The Strands of Fate', '2', '68', 'In each of your turns, you can choose to re-roll a single failed hit or wound roll, or a single failed saving throw for Brother-Captain Stern. However, if you do so, your opponent can re-roll a single failed hit or wound roll, or a single failed saving throw for one of their models in their next turn.'),
+('Psychic Locus', '2', '68', 'When a friendly GREY KNIGHTS unit within 6" of any BROTHER-CAPTAINS manifests the Smitepower, double its range.'),
+('Zone of Banishment', '2', '68', 'When Brother-Captain Stern manifests the Smite psychic power, it has a range of 6" rather than 18". Additionally, the target unit suffers only 1 mortal wound rather than D3 (whether or not the result of the Psychic test is more than 10) – unless the target is a DAEMON, in which case it suffers 3 mortal wounds instead of D3 – and all DAEMON units within 6" of Brother-Captain Stern suffer 1 mortal wound.'),
+('Crux Terminatus', '2', '70', 'This model has a 5+ invulnerable save.'),
+('Psychic Hood', '2', '70', 'You can add 1 to Deny the Witch tests you take for this model against enemy PSYKERS within 12".'),
+('Blessing of the Omnissiah', '2', '71', 'At the end of your Movement phase, this model can repair a single friendly GREY KNIGHTS VEHICLE (other than models that can FLY) within 1". That vehicle regains D3 wounds lost earlier in the battle. A vehicle can only be repaired once each turn.'),
+('Rosarius', '2', '72', 'This model has a 4+ invulnerable save.'),
+('Litanies of Hate', '2', '72', 'You can re-roll failed hit rolls in the Fight phase for friendly GREY KNIGHTS units within 6" of this model.'),
+('Spiritual Leaders', '2', '72', 'All friendly GREY KNIGHTS units within 6" of this model can use the Chaplain\’s Leadership instead of their own.'),
+('The Perfect Warrior', '2', '72', 'At the start of each Fight phase, you must choose a combat stance for this model to adopt for the duration of that phase – either the Sword Strike stance or the Blade Shield stance. If you choose the Sword Strike stance, add 1 to this model\’s wound rolls for that phase. If you choose the Blade Shield stance, add 1 to this model\’s saving throws for that phase.'),
+('Combat Squads', '2', '72', 'Before any models are deployed at the start of the game, a Squad containing 10 models may be split into two units, each containing 5 models.'),
+('Narthecium', '2', '75', 'At the end of any of your Movement phases, the Apothecary can attempt to heal or revive a single model. Select a friendly GREY KNIGHTS INFANTRY unit within 3" of the Apothecary. If that unit contains a wounded model, it immediately regains D3 lost wounds. If the chosen unit contains no wounded models but one or more of its models have been slain during the battle, roll a D6. On a 4+ a single slain model is returned to the unit with 1 wound remaining. If an Apothecary fails to revive a model in this manner he can do nothing else for the remainder of the turn (shoot, charge, fight etc.) as he recovers the gene-seed of the fallen warrior. A unit can only be the target of the Narthecium ability once in each turn.'),
+('Sacred Banner', '2', '76', 'Friendly GREY KNIGHTS units within 6" of any sacred banners add 1 to their Leadership characteristic. In addition, models from friendly GREY KNIGHTS INFANTRY units that are within 6" of any sacred banners when they fight can make 1 additional attack that phase.'),
+('Explodes', '2', '80', 'If this model is reduced to 0 wounds, roll a D6 before removing the model from the battlefield; on a 6 it explodes, and each unit within 3" suffers D3 mortal wounds.'),
+('Smoke Launchers', '2', '80', 'Once per game, instead of shooting any weapons in the Shooting phase, this model can use its smoke launchers; until your next Shooting phase your opponent must subtract 1 from all hit rolls for ranged weapons that target this vehicle.'),
+('Unyielding Ancient', '2', '81', 'Roll a D6 each time this model loses a wound; on a 6 the damage is ignored and that wound is not lost.'),
+('Mindlock', '2', '81', 'Models in this unit improve both their Weapon Skill and Ballistic Skill to 4+, and their Leadership to 9, whilst they are within 6" of any friendly GREY KNIGHTS TECHMARINES.'),
+('Personal Teleporters', '2', '82', 'This unit can move across models and terrain as if they were not there. In addition, once per battle, instead of moving this unit normally in the Movement phase, you can choose for them to make a teleport shunt. At the end of the Movement phase, remove all of the models in the unit from the battlefield, then immediately set them up anywhere that is more than 9" from any enemy models.'),
+('Power of the Machine Spirit', '2', '85', 'This model does not suffer the penalty to hit rolls for moving and firing Heavy weapons.'),
+('Frag Assault Launchers', '2', '86', 'Roll a D6 each time this model finishes a charge move within 1" of an enemy unit; on a 4+ that unit suffers D3 mortal wounds.'),
+('Self-Repair', '2', '88', 'Roll a D6 at the start of each of your turns; on a 6, this model regains one lost wound.'),
+('Crash and Burn', '2', '89', 'If this model is reduced to 0 wounds, roll a D6 before removing the model from the battlefield; on a 6 it crashes and explodes, and each unit within 6" suffers D3 mortal wounds.'),
+('Interceptor', '2', '89', 'You can add 1 to hit rolls for this model when targeting an enemy in the Shooting phase that can FLY.'),
+('Supersonic', '2', '89', 'Each time this model moves, first pivot it on the spot up to 90° (this does not contribute to how far the model moves), and then move the model straight forwards. Note that it cannot pivot again after the initial pivot. When this model Advances, increase its Move characteristic by 20" until the end of the phase – do not roll a dice.'),
+('Hard to Hit', '2', '89', 'Your opponent must subtract 1 from hit rolls for attacks that target this model in the Shooting phase.'),
+('Infernum Halo-launcher', '2', '89', 'You can re-roll save rolls of 1 for this model.'),
+('Airborne', '2', '90', 'This model cannot charge, can only be charged by units that can FLY, and can only attack or be attacked in the Fight phase by units that can FLY.'),
+('Hover Jet', '2', '91', 'Before this model moves in your Movement phase, you can declare it will hover. Its Move characteristic becomes 20" until the end of the phase, and it loses the Airborne, Hard to Hit and Supersonic abilities until the beginning of your next Movement phase.');
+
+INSERT INTO book(book_name) VALUES
+('Warhammer 40,000 - 8th Edition'),
+('Codex: Grey Knights'),
+('Codex: Necrons');
 
 INSERT INTO composition() VALUES
 ('', ''),
@@ -18,15 +59,12 @@ INSERT INTO composition() VALUES
 ('', ''),
 ('', '');
 
-INSERT INTO disciplines() VALUES
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', '');
+INSERT INTO disciplines(discipline_name, book, page_num) VALUES
+('Sanctic', 'Codex: Grey Knights', '101');
+('', '', ''),
+('', '', ''),
+('', '', ''),
+('', '', '');
 
 INSERT INTO faction_keywords(faction_keyword) VALUES
 ('Imperium'),
@@ -74,37 +112,60 @@ INSERT INTO keywords(keyword) VALUES
 ('Stormraven Gunship'),
 ('Stormtalon Gunship');
 
-INSERT INTO powers() VALUES
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', '');
+INSERT INTO powers(power_name, discipline, power_fluff, power_description) VALUES
+('Purge Soul', '1', 'The psyker draws upon every ounce of willpower he possesses to purge the evil of his foes\’ souls, scouring every trace of corruption even if it destroys them in the process', 'Purge Soul has a warp charge value of 5. If manifested, pick a visible enemy unit within 12" of the psyker. Both controlling players roll a dice and add their respective unit\’s highest Leadership value. If the target\’s total is equal to or greater than the psyker\’s total, nothing happens. If the psyker\’s total is greater than the target\’s total, the target unit suffers a number of mortal wounds equal to the difference.'),
+('Gate of Infinity', '1', 'The psyker punches a corridor through the roiling immaterium, allowing him to cross great distances in the blink of an eye.', 'Gate of Infinityhas a warp charge value of 6. If manifested, pick a friendly GREY KNIGHTS unit within 12" of the psyker. Remove that unit from the battlefield and immediately set it up anywhere on the battlefield that is more than 9" from any enemy models.'),
+('Hammerhand', '1', 'Focusing the raging power of his mind, the psyker augments the strength of his comrades to the point where they can crush flesh and bone with a single blow.', 'Hammerhand has a warp charge value of 6. If manifested, pick a friendly GREY KNIGHTS unit within 12" of the psyker. Add 1 to any wound rolls you make for that unit\’s Melee weapons until the start of your next Psychic phase.'),
+('Sanctuary', '1', 'Chanting words of warding, the psyker creates a zone of light around him that can both protect him from harm and repel daemonic creatures.', 'Sanctuary has a warp charge value of 6. If manifested, pick a friendly GREY KNIGHTS unit within 12" of the psyker. That unit gains a 5+ invulnerable save until the start of your next Psychic phase. If any models in the target unit already have an invulnerable save, add 1 to any invulnerable saving throws you make for them until the start of your next Psychic phase instead.'),
+('Astral Aim', '1', 'The psyker reaches out to the minds of his fellow battle-brothers, mystically guiding their aim to the chosen target.', 'Astral Aim has a warp charge value of 5. If manifested, pick a friendly GREY KNIGHTS unit within 18" of the psyker. Until your next Psychic phase, the unit you picked is able to target enemy units that are not visible to them, and units they target with shooting attacks do not gain any bonus to their saving throws for being in cover.'),
+('Vortex of Doom', '1', 'The psyker tears a rift between realspace and the warp, condemning his foes to total oblivion.', 'Vortex of Doom has a warp charge value of 8. If manifested, a vortex opens above the nearest visible enemy model within 12" of the psyker. That model\’s unit, and every other unit within 3" of that model suffers D3 mortal wounds. The number of mortal wounds inflicted is increased to D6 if the power is manifested with a Psychic test of 12+.');
 
-INSERT INTO role() VALUES
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', '');
+INSERT INTO role(role_type, sigil) VALUES
+('Headquarters', 'images/roles/01_HQ.png'),
+('Troops', 'images/roles/02_Troops.png'),
+('Elites', 'images/roles/03_Elites.png'),
+('Fast Attack', 'images/roles/04_Fast_Attack.png'),
+('Heavy Support', 'images/roles/05_Heavy_Support.png'),
+('Dedicated Transport', 'images/roles/06_Dedicated_Transport.png'),
+('Flyer', 'images/roles/07_Flyer.png'),
+('Fortification', 'images/roles/08_Fortification.png'),
+('Lord of War', 'images/roles/09_Lord_of_War.png');
+
+INSERT INTO units(unit_name, modelsperunit_min, modelsperunit_max, pointspermodel) VALUES
+('Apothecary', '1', '1', '90'),
+('Brother-Captain', '1', '1', '150'),
+('Brother-Captain Stern', '1', '1', '157'),
+('Brotherhood Ancient', '1', '1', '128'),
+('Brotherhood Champion', '1', '1', '113'),
+('Castellan Crowe', '1', '1', '125'),
+('Chaplain', '1', '1', '144'),
+('Dreadnought', '1', '1', '87'),
+('Grandmaster', '1', '1', '160'),
+('Grandmaster Voldus', '1', '1', '190'),
+('Grandmaster in Nemesis Dreadknight', '1', '1', '190'),
+('Interceptor Squad', '5', '10', '23'),
+('Land Raider', '1', '1', '239'),
+('Land Raider Crusader', '1', '1', '244'),
+('Land Raider Redeemer', '1', '1', '244'),
+('Librarian', '1', '1', '157'),
+('Lord Kaldor Draigo', '1', '1', '240'),
+('Nemesis Dreadknight', '1', '1', '130'),
+('Paladin Ancient', '1', '1', '140'),
+('Paladin Squad', '3', '10', '53'),
+('Purgation Squad', '5', '10', '19'),
+('Purifier Squad', '5', '10', '26'),
+('Razorback', '1', '1', '65'),
+('Rhino', '1', '1', '70'),
+('Servitors', '4', '4', '2'),
+('Stormhawk Interceptor', '1', '1', '85'),
+('Stormraven Gunship', '1', '1', '172'),
+('Stormtalon Gunship', '1', '1', '110'),
+('Strike Squad', '5', '10', '19'),
+('Techmarine', '1', '1', '91'),
+('Terminator Squad', '5', '10', '46'),
+('Venerable Dreadnought', '1', '1', '110');
 
 INSERT INTO stat_block() VALUES
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', '');
-
-INSERT INTO units() VALUES
 ('', ''),
 ('', ''),
 ('', ''),
