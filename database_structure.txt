@@ -43,7 +43,7 @@ CREATE TABLE composition(
     id INT PRIMARY KEY AUTO_INCREMENT,
     description VARCHAR(4096),
     power_rating SMALLINT,
-    models SMALLINT
+    isUnique BOOLEAN
 );
 
 CREATE TABLE stat_block(
