@@ -1,55 +1,71 @@
-CREATE TABLE keywords(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    keyword VARCHAR(50)
+CREATE TABLE Book(
+    BookId int NOT NULL AUTO_INCREMENT,
+    BookName VARCHAR(96),
+    constraint PK_BookId PRIMARY KEY(BookId)
 );
 
-CREATE TABLE faction_keywords(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    faction_keyword VARCHAR(50)
+CREATE TABLE Discipline(
+    DisciplineId int NOT NULL AUTO_INCREMENT,
+    DisciplineName VARCHAR(150) NOT NULL,
+    BookId int NOT NULL,
+    PageNum SMALLINT,
+    constraint PK_Discipline PRIMARY KEY(DisciplineId),
+    constraint FK_BookId FOREIGN KEY (BookId) REFERENCES Book(BookId)
 );
 
-CREATE TABLE role(
-    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    role_type VARCHAR(50) NOT NULL,
-    sigil VARCHAR(150)
+CREATE TABLE Power(
+    PowerId int NOT NULL AUTO_INCREMENT,
+    PowerName VARCHAR(150) NOT NULL,
+    DisciplineId int,
+    PowerFluff VARCHAR(4096),
+    PowerDescription VARCHAR(4096),
+    constraint PK_Power PRIMARY KEY (PowerId),
+    constraint FK_DisciplineId FOREIGN KEY (DisciplineId)
+        REFERENCES Discipline(DisciplineId)
 );
 
-CREATE TABLE abilities(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    ability_name VARCHAR(150),
-    book SMALLINT,
-    page_num INT,
-    ability_description VARCHAR(4096)
+CREATE TABLE Role(
+    RoleId int NOT NULL AUTO_INCREMENT,
+    RoleType VARCHAR(50) NOT NULL,
+    Sigil VARCHAR(150),
+    constraint PK_Role PRIMARY KEY (RoleId)
 );
 
-CREATE TABLE powers(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    power_name VARCHAR(150) NOT NULL,
-    discipline INT,
-    power_fluff VARCHAR(4096),
-    power_description VARCHAR(4096),
-    FOREIGN KEY (discipline)
-        REFERENCES disciplines(id)
+CREATE TABLE Keyword(
+    KeywordId int NOT NULL AUTO_INCREMENT,
+    KeywordName VARCHAR(50),
+    constraint PK_Keyword PRIMARY KEY (KeywordId)
 );
 
-CREATE TABLE disciplines(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    discipline_name VARCHAR(150) NOT NULL,
-    book VARCHAR(50),
-    page_num SMALLINT
+CREATE TABLE FactionKeyword(
+    FactionKeywordId int NOT NULL AUTO_INCREMENT,
+    FactionKeywordName VARCHAR(50),
+    constraint PK_FactionKeyword PRIMARY KEY (FactionKeywordId)
 );
 
-CREATE TABLE composition(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    description VARCHAR(4096),
-    power_rating SMALLINT,
-    isUnique BOOLEAN
+CREATE TABLE Ability(
+    AbilityId int NOT NULL AUTO_INCREMENT,
+    AbilityName VARCHAR(150),
+    BookId int NOT NULL,
+    PageNum INT,
+    AbilityDescription VARCHAR(4096),
+    constraint PK_Ability PRIMARY KEY (AbilityId),
+    constraint FK_Book FOREIGN KEY (BookId)
+        REFERENCES Book(BookId)
 );
 
-CREATE TABLE stat_block(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    model_name VARCHAR(50),
-    movement TINYINT,
+CREATE TABLE Composition(
+    CompositionId int NOT NULL AUTO_INCREMENT,
+    Description VARCHAR(4096),
+    PowerRating SMALLINT,
+    IsUnique BOOLEAN,
+    constraint PK_Composition PRIMARY KEY (CompositionId)
+);
+
+CREATE TABLE StatBlock(
+    StatBlockId int NOT NULL AUTO_INCREMENT,
+    ModelName VARCHAR(50),
+    Movement TINYINT,
     WeaponSkill TINYINT,
     BallisticSkill TINYINT,
     Strength TINYINT,
@@ -57,21 +73,36 @@ CREATE TABLE stat_block(
     Wounds TINYINT,
     Attacks TINYINT,
     Leadership TINYINT,
-    Save TINYINT
+    Save TINYINT,
+    constraint PK_StatBlockId PRIMARY KEY (StatBlockId)
 );
 
-CREATE TABLE units(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    unit_name VARCHAR(50),
-    modelsperunit_min SMALLINT,
-    modelsperunit_max SMALLINT,
-    pointspermodel SMALLINT
+CREATE TABLE Model(
+    ModelId int NOT NULL AUTO_INCREMENT,
+    ModelName VARCHAR(128),
+    constraint PK_ModelId PRIMARY KEY (ModelId)
 );
 
-CREATE TABLE book(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    book_name VARCHAR(96)
+CREATE TABLE Unit(
+    UnitId int NOT NULL AUTO_INCREMENT,
+    UnitName VARCHAR(50),
+    CompositionId int NOT NULL,
+    ModelCount SMALLINT,
+    ModelPointCostEach SMALLINT,
+    constraint PK_UnitId PRIMARY KEY (UnitId),
+    constraint FK_CompositionId FOREIGN KEY (CompositionId)
+        REFERENCES Composition(CompositionId)
 );
+
+CREATE TABLE UnitModelXREF(
+    UnitModelId int NOT NULL AUTO_INCREMENT,
+    UnitId int NOT NULL,
+    ModelId int NOT NULL,
+    constraint PK_UnitModelId PRIMARY KEY (UnitModelId),
+    constraint FK_UnitId FOREIGN KEY (UnitId) REFERENCES Unit(UnitId),
+    constraint FK_ModelId FOREIGN KEY (ModelId) REFERENCES Model(ModelId)
+);
+
 
 CREATE TABLE weapons_points_xref();
 
